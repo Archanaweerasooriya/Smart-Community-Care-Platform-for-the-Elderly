@@ -140,24 +140,22 @@ section{padding:5.5rem 2rem}
 .status-now{background:#fdf3d4;color:#7a5800}
 .status-soon{background:#fde8e0;color:#8a3a20} /* DOWNLOADS */
 #downloads{background:#fff}
-.dl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:1.2rem}
-.dl-card{border-radius:18px;padding:1.6rem;display:flex;flex-direction:column;gap:.8rem;border:1.5px solid #deeee9;transition:box-shadow .25s,transform .25s;background:#fff}
-.dl-card:hover{box-shadow:0 14px 40px rgba(0,0,0,.09);transform:translateY(-4px)}
-.dl-icon{font-size:2.2rem}
-.dl-card h4{font-size:.92rem;font-weight:700;color:var(--navy)}
-.dl-card p{font-size:.8rem;color:var(--muted);flex:1;line-height:1.6}
-.dl-btn{display:inline-block;background:var(--teal);color:#fff;padding:.45rem 1.1rem;border-radius:20px;font-size:.78rem;font-weight:700;text-decoration:none;text-align:center;transition:background .2s}
-.dl-btn:hover{background:#228b7e}
-.dl-btn.disabled{background:#c9d8d5;cursor:not-allowed;pointer-events:none}
-.dl-btn.avail{background:var(--sage)} /* PRESENTATIONS */
-#presentations{background:var(--light)}
-.pres-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:1.2rem}
-.pres-card{background:#fff;border-radius:18px;padding:1.6rem;box-shadow:0 4px 20px rgba(0,0,0,.07);display:flex;flex-direction:column;gap:.7rem;transition:transform .25s}
-.pres-card:hover{transform:translateY(-5px)}
-.pres-thumb{width:100%;height:115px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:2.5rem}
-.pt-teal{background:#dff6f3}.pt-gold{background:#fdf6de}.pt-coral{background:#fde8e0}.pt-sage{background:#e0f5e9}
-.pres-card h4{font-size:.9rem;font-weight:700;color:var(--navy)}
-.pres-card p{font-size:.78rem;color:var(--muted);flex:1;line-height:1.6} /* ABOUT */
+.doc-list{display:flex;flex-direction:column;gap:1.2rem}
+.doc-row{display:grid;grid-template-columns:220px 1fr;gap:1.4rem;align-items:center}
+@media(max-width:700px){.doc-row{grid-template-columns:1fr;gap:.6rem}}
+.doc-label{display:flex;align-items:center;gap:.75rem;padding:.9rem 1.2rem;background:var(--light);border-radius:14px;font-size:.84rem;font-weight:700;color:var(--navy)}
+.doc-label-icon{width:38px;height:38px;border-radius:10px;background:var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff}
+.doc-card{display:flex;align-items:center;justify-content:space-between;gap:1rem;background:#fff;border-radius:14px;padding:1.1rem 1.4rem;border:1.5px solid #deeee9;transition:box-shadow .2s,transform .2s}
+.doc-card:hover{box-shadow:0 8px 28px rgba(0,0,0,.08);transform:translateY(-2px)}
+.doc-card-inner{display:flex;align-items:center;gap:.9rem}
+.doc-file-icon{width:38px;height:38px;border-radius:10px;background:var(--light);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--teal)}
+.doc-info h5{font-size:.88rem;font-weight:700;color:var(--navy);margin-bottom:.2rem}
+.doc-scope{font-size:.74rem;color:var(--muted);font-weight:500}
+.doc-btn{display:inline-block;background:var(--teal);color:#fff;padding:.4rem 1.1rem;border-radius:20px;font-size:.76rem;font-weight:700;text-decoration:none;white-space:nowrap;transition:background .2s}
+.doc-btn:hover{background:#228b7e}
+.doc-btn.disabled{background:#c9d8d5;cursor:not-allowed;pointer-events:none;color:#fff}
+.doc-btn-group{display:flex;gap:.5rem;flex-shrink:0} /* PRESENTATIONS */
+#presentations{background:var(--light)} /* ABOUT */
 #about{background:#fff}
 .supervisors-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-bottom:3rem}
 .supervisor-card{background:linear-gradient(135deg,var(--navy),#2a3e6e);border-radius:20px;padding:2rem;display:flex;align-items:center;gap:1.2rem;color:#fff;box-shadow:0 16px 50px rgba(0,0,0,.2)}
@@ -288,9 +286,199 @@ footer span{color:var(--teal);font-weight:700} /* RESPONSIVE */
   </div>
 </div>
 </section> 
-<section id="downloads"> <div class="container"> <div class="section-header"> <div class="section-label">Documents</div> <h2 class="section-title">Project Documents</h2> <p class="section-sub">Research documents and deliverables produced at each stage of the project.</p> </div> <div class="dl-grid">  </div>
+<section id="downloads">
+<div class="container">
+  <div class="section-header">
+    <div class="section-label">Documents</div>
+    <h2 class="section-title">Documents</h2>
+    <p class="section-sub">Please find all documents related to this project below.</p>
+  </div>
+  <div class="doc-list">
+
+    <div class="doc-row">
+      <div class="doc-label">
+        <div class="doc-label-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="22" height="22"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <span>Project Charter</span>
+      </div>
+      <div class="doc-card">
+        <div class="doc-card-inner">
+          <div class="doc-file-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <div class="doc-info">
+            <h5>Project Charter Document</h5>
+            <span class="doc-scope">Group · Semester 1</span>
+          </div>
+        </div>
+        <a href="https://mysliit-my.sharepoint.com/:f:/g/personal/it22029072_my_sliit_lk/IgCxJBYxnHjMQaFND-7yCs7yAXx2QEc6RnS3QXfxVhbV-EU?e=MFCveJ" target="_blank" class="doc-btn">View Folder</a>
+      </div>
+    </div>
+
+    <div class="doc-row">
+      <div class="doc-label">
+        <div class="doc-label-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="22" height="22"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <span>Proposal Document</span>
+      </div>
+      <div class="doc-card">
+        <div class="doc-card-inner">
+          <div class="doc-file-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <div class="doc-info">
+            <h5>Research Proposal Document</h5>
+            <span class="doc-scope">Group · Semester 1</span>
+          </div>
+        </div>
+        <a href="https://mysliit-my.sharepoint.com/:f:/g/personal/it22029072_my_sliit_lk/IgB0UVVmjtknSLIwzROAZIcaAcMV59tZnU7W4l0u5fYMqUM?e=8W49Oy" target="_blank" class="doc-btn">View Proposal</a>
+      </div>
+    </div>
+
+    <div class="doc-row">
+      <div class="doc-label">
+        <div class="doc-label-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="22" height="22"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <span>Check List Documents</span>
+      </div>
+      <div class="doc-card">
+        <div class="doc-card-inner">
+          <div class="doc-file-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <div class="doc-info">
+            <h5>Assessment &amp; Progress Checklists</h5>
+            <span class="doc-scope">Individual · Sem 1 &amp; Sem 2</span>
+          </div>
+        </div>
+        <a href="https://mysliit-my.sharepoint.com/:f:/g/personal/it22029072_my_sliit_lk/IgBHBQgHlyMTS7iepUc3kEBuASOeyW4SmWMg3rgZKnttSVU?e=Ld8j69" target="_blank" class="doc-btn">Access Checklists</a>
+      </div>
+    </div>
+
+    <div class="doc-row">
+      <div class="doc-label">
+        <div class="doc-label-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="22" height="22"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <span>Final Report</span>
+      </div>
+      <div class="doc-card">
+        <div class="doc-card-inner">
+          <div class="doc-file-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <div class="doc-info">
+            <h5>Final Research Report</h5>
+            <span class="doc-scope">Pending · Semester 2</span>
+          </div>
+        </div>
+        <div class="doc-btn-group">
+          <a href="https://mysliit-my.sharepoint.com/:f:/g/personal/it22029072_my_sliit_lk/IgC1TGBrX5OkRpv6GDJKAzrsAQRiD39iBdZ6174xiG8ZLFc?e=hyxeg6" target="_blank" class="doc-btn">View Report</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
 </section> 
-<section id="presentations"> <div class="container"> <div class="section-header"> <div class="section-label">Presentations</div> <h2 class="section-title">Presentation Slides</h2> <p class="section-sub">Slides from all research presentations and project assessments.</p> </div> <div class="pres-grid"> <div class="pres-card"> <div class="pres-thumb pt-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="40" height="40" style="color:var(--teal)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div> <h4>Proposal Presentation</h4> <p>Research problem, elderly care domain overview, gap identification, and proposed four-component AI platform.</p> <a class="dl-btn disabled">Coming Soon</a> </div> <div class="pres-card"> <div class="pres-thumb pt-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="40" height="40" style="color:#b8900a"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div> <h4>Progress Presentation 1</h4> <p>Subsystem architecture designs, CNN prototype, early Rasa NLU training, and dashboard wireframes.</p> <a class="dl-btn disabled">Coming Soon</a> </div> <div class="pres-card"> <div class="pres-thumb pt-coral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="40" height="40" style="color:var(--coral)"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div> <h4>Progress Presentation 2</h4> <p>85%+ integrated platform — all four AI components complete with live demos and performance metrics.</p> <a href="#" class="dl-btn" style="background:var(--sage);color:#fff;">View Slides</a> </div> <div class="pres-card"> <div class="pres-thumb pt-sage"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="40" height="40" style="color:var(--sage)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div> <h4>Final Presentation</h4> <p>Complete system showcase — user acceptance study, deployment validation, and caregiver impact assessment.</p> <a class="dl-btn disabled">Pending</a> </div> </div> </div>
+<section id="presentations">
+<div class="container">
+  <div class="section-header">
+    <div class="section-label">Presentations</div>
+    <h2 class="section-title">Presentations</h2>
+    <p class="section-sub">Please find all presentations related to this project below.</p>
+  </div>
+  <div class="doc-list">
+
+    <div class="doc-row">
+      <div class="doc-label">
+        <div class="doc-label-icon" style="background:var(--teal)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </div>
+        <div><div style="font-size:.68rem;color:var(--muted);font-weight:600;margin-bottom:.1rem">Semester 1</div><span>Proposal Presentation</span></div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-card-inner">
+          <div class="doc-file-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div class="doc-info">
+            <h5>Project Proposal Presentation</h5>
+            <span class="doc-scope">Research problem, gap identification, and proposed four-component AI solution overview.</span>
+          </div>
+        </div>
+        <a href="https://mysliit-my.sharepoint.com/:f:/g/personal/it22029072_my_sliit_lk/IgC4Eq_komKsTaiktX4XjuxVAVYrNFIFu83GRY3Wr5SNKLs?e=2P9qbw" target="_blank" class="doc-btn">View Slides</a>
+      </div>
+    </div>
+
+    <div class="doc-row">
+      <div class="doc-label">
+        <div class="doc-label-icon" style="background:#b8900a">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" width="20" height="20"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <div><div style="font-size:.68rem;color:var(--muted);font-weight:600;margin-bottom:.1rem">Semester 1</div><span>Progress Presentation 1</span></div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-card-inner">
+          <div class="doc-file-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div class="doc-info">
+            <h5>Progress Presentation 1</h5>
+            <span class="doc-scope">Component architecture, early prototypes and initial dataset preparation across all four subsystems.</span>
+          </div>
+        </div>
+        <a href="https://mysliit-my.sharepoint.com/:f:/g/personal/it22029072_my_sliit_lk/IgC4Eq_komKsTaiktX4XjuxVAVYrNFIFu83GRY3Wr5SNKLs?e=2P9qbw" target="_blank" class="doc-btn">View Slides</a>
+      </div>
+    </div>
+
+    <div class="doc-row">
+      <div class="doc-label">
+        <div class="doc-label-icon" style="background:var(--coral)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" width="20" height="20"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div><div style="font-size:.68rem;color:var(--muted);font-weight:600;margin-bottom:.1rem">Semester 2</div><span>Progress Presentation 2</span></div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-card-inner">
+          <div class="doc-file-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div class="doc-info">
+            <h5>Progress Presentation 2</h5>
+            <span class="doc-scope">90%+ platform — all four AI components integrated with live demos and performance metrics.</span>
+          </div>
+        </div>
+        <a href="https://mysliit-my.sharepoint.com/:f:/g/personal/it22029072_my_sliit_lk/IgC4Eq_komKsTaiktX4XjuxVAVYrNFIFu83GRY3Wr5SNKLs?e=2P9qbw" target="_blank" class="doc-btn" style="background:var(--sage)">View Slides</a>
+      </div>
+    </div>
+
+    <div class="doc-row">
+      <div class="doc-label">
+        <div class="doc-label-icon" style="background:var(--sage)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" width="20" height="20"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div><div style="font-size:.68rem;color:var(--muted);font-weight:600;margin-bottom:.1rem">Semester 2</div><span>Final Presentation</span></div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-card-inner">
+          <div class="doc-file-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div class="doc-info">
+            <h5>Final Presentation</h5>
+            <span class="doc-scope">Complete system showcase with clinical validation, usability results and future roadmap.</span>
+          </div>
+        </div>
+        <a class="doc-btn disabled">Pending</a>
+      </div>
+    </div>
+
+  </div>
+</div>
 </section> 
 <section id="about"> <div class="container"> <div class="section-header"> <div class="section-label">About Us</div> <h2 class="section-title">The Research Team</h2> <p class="section-sub">Department of Software Engineering · Faculty of Computing · SLIIT, Malabe, Sri Lanka</p> </div> <div class="supervisors-wrap" style="display:flex;justify-content:center;margin-bottom:3rem;"> <div class="supervisor-card" style="max-width:480px;width:100%;"> <div class="sav"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1.8" width="28" height="28"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div> <div> <div class="sv-tag">Supervisor</div> <h4>Ms. Geethanjali Wimalaratne</h4> <div class="sv-role">Senior Lecturer · Department of Software Engineering · Faculty of Computing · SLIIT</div> <div class="sv-email">geethanjali.w@sliit.lk</div> </div> </div> </div> <div class="team-grid"> <div class="member-card"> <div class="member-avatar av-teal">WA</div> <h4>Weerasooriya W.A.J.A</h4> <div class="role">Emotion Detection · CNN</div> <div class="mid">IT22029072</div> <a href="mailto:IT22029072@my.sliit.lk">IT22029072@my.sliit.lk</a> </div> <div class="member-card"> <div class="member-avatar av-gold">HH</div> <h4>Herath H.M.S.M</h4> <div class="role">Sinhala Voice Controller</div> <div class="mid">IT22903792</div> <a href="mailto:IT22903792@my.sliit.lk">IT22903792@my.sliit.lk</a> </div> <div class="member-card"> <div class="member-avatar av-coral">DL</div> <h4>Dewmini L.K.R</h4> <div class="role">IoT Fall Detection · ESP32</div> <div class="mid">IT22001948</div> <a href="mailto:IT22001948@my.sliit.lk">IT22001948@my.sliit.lk</a> </div> <div class="member-card"> <div class="member-avatar av-sage">CI</div> <h4>Chamodya I.V.I</h4> <div class="role">Sleep Monitoring · CNN</div> <div class="mid">IT22114594</div> <a href="mailto:IT22114594@my.sliit.lk">IT22114594@my.sliit.lk</a> </div> </div> </div>
 </section> 
